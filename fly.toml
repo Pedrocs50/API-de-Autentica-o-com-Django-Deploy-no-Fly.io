@@ -1,0 +1,19 @@
+# fly.toml app configuration file generated for auth-api-app on 2025-04-23T21:46:48-03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'auth-api-app'
+primary_region = 'gru'
+
+[build]
+  buildpacks = ['heroku/python']
+
+[env]
+  DJANGO_SECRET_KEY="change-me"
+  DJANGO_DEBUG="False"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
