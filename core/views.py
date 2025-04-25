@@ -1,7 +1,6 @@
 from rest_framework import generics, permissions
 from .serializers import SignupSerializer, UserSerializer
 from .models import User
-from rest_framework.response import Response
 
 class SignupView(generics.CreateAPIView):
     queryset = User.objects.all()
